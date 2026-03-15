@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Measurement — AM CONCRETE</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#" aria-label="AM CONCRETE">
+  <img src="logo.png" alt="AM CONCRETE logo" class="logo">
+      </a>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      <nav class="main-nav">
+        <a href="index.html#about"><i class="fa-solid fa-info-circle" aria-hidden="true"></i> About</a>
+        <div class="nav-item nav-dropdown">
+          <a href="index.html#services" class="drop-toggle"><i class="fa-solid fa-compass-drafting icon" aria-hidden="true"></i> Services <i class="fa-solid fa-caret-down" aria-hidden="true"></i></a>
+          <div class="dropdown-menu" aria-label="Services submenu">
+            <a href="index.html#service-ready-mix"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>Ready mix concrete</a>
+            <a href="index.html#service-transport"><i class="fa-solid fa-truck" aria-hidden="true"></i>Transport & pumping</a>
+            <a href="index.html#service-technical"><i class="fa-solid fa-tools" aria-hidden="true"></i>Technical services</a>
+            <a href="#" target="_blank" rel="noopener"><i class="fa-solid fa-calculator" aria-hidden="true"></i>Measurement</a>
+          </div>
+        </div>
+        <a href="index.html#projects"><i class="fa-solid fa-building" aria-hidden="true"></i> Projects</a>
+        <a href="index.html#locations"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Locations</a>
+        <a href="index.html#careers"><i class="fa-solid fa-user-tie" aria-hidden="true"></i> Careers</a>
+        <a href="index.html#contact"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button id="theme-toggle" class="btn-ghost" aria-label="Toggle theme" aria-pressed="false">
+          <i class="fa-solid fa-sun" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section container">
+      <h1><i class="fa-solid fa-calculator" aria-hidden="true"></i> Concrete Measurement Tools</h1>
+      <p class="muted">Choose a calculator and enter dimensions. Each input has its own unit selector.</p>
+
+    <article class="calc-card">
+        <h2>Slabs, Square Footings, or Walls</h2>
+        <div class="calc-grid">
+            <div class="calc-inputs">
+    
+                <div class="input-container">
+                    <div class="input-row">
+                        <label for="slab-length">Length (l)</label>
+                        <input type="number" id="slab-length" min="0" step="any" placeholder="40" value="40">
+                        <select id="slab-length-unit">
+                            <option value="m">meters</option>
+                            <option value="ft" selected>feet</option>
+                            <option value="cm">centimeters</option>
+                            <option value="in">inches</option>
+                        </select>
+                    </div>
+    
+                    <div class="input-row">
+                        <label for="slab-width">Width (w)</label>
+                        <input type="number" id="slab-width" min="0" step="any" placeholder="60" value="60">
+                        <select id="slab-width-unit">
+                            <option value="m">meters</option>
+                            <option value="ft" selected>feet</option>
+                            <option value="cm">centimeters</option>
+                            <option value="in">inches</option>
+                        </select>
+                    </div>
+    
+                    <div class="input-row">
+                        <label for="slab-depth">Thickness / Height (h)</label>
+                        <input type="number" id="slab-depth" min="0" step="any" placeholder="6" value="6">
+                        <select id="slab-depth-unit">
+                            <option value="m">meters</option>
+                            <option value="ft">feet</option>
+                            <option value="cm">centimeters</option>
+                            <option value="in" selected>inches</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-row">
+                    <label for="slab-qty">Quantity</label>
+                    <input type="number" id="slab-qty" min="1" step="1" value="1">
+                </div>
+                <div class="calc-actions">
+                    <button id="slab-calc" class="btn primary">Calculate</button>
+                    <button id="slab-clear" class="btn outline">Clear</button>
+                </div>
+            </div>
+            <div class="calc-result">
+                <img src="img/slab.png" alt="Diagram of slab dimensions" class="calc-diagram">
+                <h3>Result</h3>
+                <p id="slab-output">Enter values and click Calculate.</p>
+            </div>
+        </div>
+    </article>
+
+    <article class="calc-card">
+        <h2>Hole, Column, or Round Footings</h2>
+        <div class="calc-grid">
+            <div class="calc-inputs">
+                <div class="input-container">
+                    <div class="input-row">
+                        <label for="round-d">Diameter (d)</label>
+                        <input type="number" id="round-d" min="0" step="any" placeholder="24" value="24">
+                        <select id="round-d-unit">
+                            <option value="m">meters</option>
+                            <option value="ft">feet</option>
+                            <option value="cm">centimeters</option>
+                            <option value="in" selected>inches</option>
+                        </select>
+                    </div>
+    
+                    <div class="input-row">
+                        <label for="round-h">Depth / Height (h)</label>
+                        <input type="number" id="round-h" min="0" step="any" placeholder="10" value="10">
+                        <select id="round-h-unit">
+                            <option value="m">meters</option>
+                            <option value="ft" selected>feet</option>
+                            <option value="cm">centimeters</option>
+                            <option value="in">inches</option>
+                        </select>
+                    </div>
+    
+                    <div class="input-row">
+                        <label for="round-qty">Quantity</label>
+                        <input type="number" id="round-qty" min="1" step="1" value="1">
+                    </div>
+                </div>
+    
+    
+                <div class="calc-actions">
+                    <button id="round-calc" class="btn primary">Calculate</button>
+                    <button id="round-clear" class="btn outline">Clear</button>
+                </div>
+            </div>
+            <div class="calc-result">
+                <img src="img/pipe.png" alt="Diagram of round footing dimensions" class="calc-diagram">
+                <h3>Result</h3>
+                <p id="round-output">Enter values and click Calculate.</p>
+            </div>
+        </div>
+    </article>
+
+    <article class="calc-card">
+        <h2>Circular Slab or Tube</h2>
+        <div class="calc-grid">
+            <div class="calc-inputs">
+                <div class="input-container">
+                    <div class="input-row">
+                        <label for="tube-d1">Outer Diameter (d1)</label>
+                        <input type="number" id="tube-d1" min="0" step="any" placeholder="30" value="30">
+                        <select id="tube-d1-unit">
+                            <option value="m">meters</option>
+                            <option value="ft">feet</option>
+                            <option value="cm">centimeters</option>
+                            <option value="in" selected>inches</option>
+                        </select>
+                    </div>
+    
+                    <div class="input-row">
+                        <label for="tube-d2">Inner Diameter (d2)</label>
+                        <input type="number" id="tube-d2" min="0" step="any" placeholder="24" value="24">
+                        <select id="tube-d2-unit">
+                            <option value="m">meters</option>
+                            <option value="ft">feet</option>
+                            <option value="cm">centimeters</option>
+                            <option value="in" selected>inches</option>
+                        </select>
+                    </div>
+    
+                    <div class="input-row">
+                        <label for="tube-h">Height (h)</label>
+                        <input type="number" id="tube-h" min="0" step="any" placeholder="7" value="7">
+                        <select id="tube-h-unit">
+                            <option value="m">meters</option>
+                            <option value="ft" selected>feet</option>
+                            <option value="cm">centimeters</option>
+                            <option value="in">inches</option>
+                        </select>
+                    </div>
+    
+                    <div class="input-row">
+                        <label for="tube-qty">Quantity</label>
+                        <input type="number" id="tube-qty" min="1" step="1" value="1">
+                    </div>
+                </div>
+                <div class="calc-actions">
+                    <button id="tube-calc" class="btn primary">Calculate</button>
+                    <button id="tube-clear" class="btn outline">Clear</button>
+                </div>
+            </div>
+            <div class="calc-result">
+                <img src="img/tube.png" alt="Diagram of tube dimensions" class="calc-diagram">
+                <h3>Result</h3>
+                <p id="tube-output">Enter values and click Calculate.</p>
+            </div>
+        </div>
+    </article>
+
+    <article class="calc-card">
+        <h2>Curb and Gutter Barrier</h2>
+        <div class="calc-grid">
+            <div class="calc-inputs">
+                <div class="input-container">
+                    <div class="input-row">
+                        <label for="curb-depth">Curb Depth</label>
+                        <input type="number" id="curb-depth" min="0" step="any" placeholder="4">
+                        <select id="curb-depth-unit">
+                            <option value="m">meters</option>
+                            <option value="ft">feet</option>
+                            <option value="cm">centimeters</option>
+                            <option value="in" selected>inches</option>
+                        </select>
+                    </div>
+    
+                    <div class="input-row">
+                        <label for="curb-gw">Gutter Width</label>
+                        <input type="number" id="curb-gw" min="0" step="any" placeholder="3" value="3">
+                        <select id="curb-gw-unit">
+                            <option value="m">meters</option>
+                            <option value="ft" selected>feet</option>
+                            <option value="cm">centimeters</option>
+                            <option value="in">inches</option>
+                        </select>
+                    </div>
+    
+                    <div class="input-row">
+                        <label for="curb-h">Curb Height</label>
+                        <input type="number" id="curb-h" min="0" step="any" placeholder="3" value="3">
+                        <select id="curb-h-unit">
+                            <option value="m">meters</option>
+                            <option value="ft" selected>feet</option>
+                            <option value="cm">centimeters</option>
+                            <option value="in">inches</option>
+                        </select>
+                    </div>
+    
+                    <div class="input-row">
+                        <label for="curb-flag">Flag Thickness</label>
+                        <input type="number" id="curb-flag" min="0" step="any" placeholder="4" value="4">
+                        <select id="curb-flag-unit">
+                            <option value="m">meters</option>
+                            <option value="ft">feet</option>
+                            <option value="cm">centimeters</option>
+                            <option value="in" selected>inches</option>
+                        </select>
+                    </div>
+    
+                    <div class="input-row">
+                        <label for="curb-l">Length</label>
+                        <input type="number" id="curb-l" min="0" step="any" placeholder="10" value="10">
+                        <select id="curb-l-unit">
+                            <option value="m">meters</option>
+                            <option value="ft" selected>feet</option>
+                            <option value="cm">centimeters</option>
+                            <option value="in">inches</option>
+                        </select>
+                    </div>
+    
+                    <div class="input-row">
+                        <label for="curb-qty">Quantity</label>
+                        <input type="number" id="curb-qty" min="1" step="1" value="1">
+                    </div>
+                </div>
+                <div class="calc-actions">
+                    <button id="curb-calc" class="btn primary">Calculate</button>
+                    <button id="curb-clear" class="btn outline">Clear</button>
+                </div>
+            </div>
+            <div class="calc-result">
+                <img src="img/curb.png" alt="Diagram of curb dimensions" class="calc-diagram" style="width: 200px;">
+                <h3>Result</h3>
+                <p id="curb-output">Enter values and click Calculate.</p>
+            </div>
+        </div>
+    </article>
+
+    <article class="calc-card">
+        <h2>Stairs</h2>
+        <div class="calc-grid">
+            <div class="calc-inputs">
+                <div class="input-container">
+                    <div class="input-row">
+                        <label for="st-run">Run (depth of step)</label>
+                        <input type="number" id="st-run" min="0" step="any" placeholder="10" value="10">
+                        <select id="st-run-unit">
+                            <option value="m">meters</option>
+                            <option value="ft">feet</option>
+                            <option value="cm">centimeters</option>
+                            <option value="in" selected>inches</option>
+                        </select>
+                    </div>
+    
+                    <div class="input-row">
+                        <label for="st-rise">Rise (height of step)</label>
+                        <input type="number" id="st-rise" min="0" step="any" placeholder="6" value="6">
+                        <select id="st-rise-unit">
+                            <option value="m">meters</option>
+                            <option value="ft">feet</option>
+                            <option value="cm">centimeters</option>
+                            <option value="in" selected>inches</option>
+                        </select>
+                    </div>
+    
+                    <div class="input-row">
+                        <label for="st-width">Width</label>
+                        <input type="number" id="st-width" min="0" step="any" placeholder="3" value="3">
+                        <select id="st-width-unit">
+                            <option value="m">meters</option>
+                            <option value="ft" selected>feet</option>
+                            <option value="cm">centimeters</option>
+                            <option value="in">inches</option>
+                        </select>
+                    </div>
+    
+                    <div class="input-row">
+                        <label for="st-plat">Platform Depth</label>
+                        <input type="number" id="st-plat" min="0" step="any" placeholder="3" value="3">
+                        <select id="st-plat-unit">
+                            <option value="m">meters</option>
+                            <option value="ft" selected>feet</option>
+                            <option value="cm">centimeters</option>
+                            <option value="in">inches</option>
+                        </select>
+                    </div>
+    
+                    <div class="input-row">
+                        <label for="st-steps">Number of Steps</label>
+                        <input type="number" id="st-steps" min="1" step="1" value="10">
+                    </div>
+                </div>
+                <div class="calc-actions">
+                    <button id="st-calc" class="btn primary">Calculate</button>
+                    <button id="st-clear" class="btn outline">Clear</button>
+                </div>
+            </div>
+            <div class="calc-result">
+                <img src="img/stairs.png" alt="Diagram of stairs dimensions" class="calc-diagram" style="width: 200px;">
+                <h3>Result</h3>
+                <p id="st-output">Enter values and click Calculate.</p>
+            </div>
+        </div>
+    </article>
+
+    </section>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div><a href="index.html">← Back to AM CONCRETE</a></div>
+        <div class="footer-links"><a href="https://sunilbn.com" target="_blank" rel="noopener" style="font-size:8px;">built by sunilbn.com</a></div>
+      </div>
+    </footer>
+
+  </main>
+
+<script>
+(function(){
+  const toMeters = { m: v=>v, ft: v=>v*0.3048, cm: v=>v*0.01, in: v=>v*0.0254 };
+  function parse(id){ const el=document.getElementById(id); return el?parseFloat(el.value)||0:0 }
+  function unit(id){ const el=document.getElementById(id); return el?el.value:'m' }
+  function show(id, html){ const el=document.getElementById(id); if(el) el.innerHTML = html }
+
+  // Slab
+  document.getElementById('slab-calc').addEventListener('click', ()=>{
+    const l=parse('slab-length'), w=parse('slab-width'), d=parse('slab-depth'), q=parse('slab-qty');
+    const lm = toMeters[unit('slab-length-unit')](l);
+    const wm = toMeters[unit('slab-width-unit')](w);
+    const dm = toMeters[unit('slab-depth-unit')](d);
+    if(lm<=0||wm<=0||dm<=0){ show('slab-output','<strong class="muted">Enter positive numbers.</strong>'); return }
+    const vol = lm*wm*dm*q;
+    show('slab-output', `<strong>${Math.ceil(vol)} m³</strong> (Exact: ${vol.toFixed(3)} m³)`);
+  });
+  document.getElementById('slab-clear').addEventListener('click', ()=>{ ['slab-length','slab-width','slab-depth'].forEach(id=>document.getElementById(id).value=''); document.getElementById('slab-output').textContent='Enter values and click Calculate.' });
+
+  // Round
+  document.getElementById('round-calc').addEventListener('click', ()=>{
+    const d=parse('round-d'), h=parse('round-h'), q=parse('round-qty');
+    const dm = toMeters[unit('round-d-unit')](d);
+    const hm = toMeters[unit('round-h-unit')](h);
+    if(dm<=0||hm<=0){ show('round-output','<strong class="muted">Enter positive numbers.</strong>'); return }
+    const r = dm/2; const vol = Math.PI * r*r * hm * q;
+    show('round-output', `<strong>${Math.ceil(vol)} m³</strong> (Exact: ${vol.toFixed(3)} m³)`);
+  });
+  document.getElementById('round-clear').addEventListener('click', ()=>{ ['round-d','round-h'].forEach(id=>document.getElementById(id).value=''); document.getElementById('round-output').textContent='Enter values and click Calculate.' });
+
+  // Tube
+  document.getElementById('tube-calc').addEventListener('click', ()=>{
+    const d1=parse('tube-d1'), d2=parse('tube-d2'), h=parse('tube-h'), q=parse('tube-qty');
+    const d1m = toMeters[unit('tube-d1-unit')](d1);
+    const d2m = toMeters[unit('tube-d2-unit')](d2);
+    const hm = toMeters[unit('tube-h-unit')](h);
+    if(d1m<=0||hm<=0||d1m<=d2m){ show('tube-output','<strong class="muted">Ensure outer diameter > inner and positive numbers.</strong>'); return }
+    const vol = Math.PI * (Math.pow(d1m/2,2) - Math.pow(d2m/2,2)) * hm * q;
+    show('tube-output', `<strong>${Math.ceil(vol)} m³</strong> (Exact: ${vol.toFixed(3)} m³)`);
+  });
+  document.getElementById('tube-clear').addEventListener('click', ()=>{ ['tube-d1','tube-d2','tube-h'].forEach(id=>document.getElementById(id).value=''); document.getElementById('tube-output').textContent='Enter values and click Calculate.' });
+
+  // Curb
+  document.getElementById('curb-calc').addEventListener('click', ()=>{
+    const cd=parse('curb-depth'), gw=parse('curb-gw'), ch=parse('curb-h'), ft=parse('curb-flag'), L=parse('curb-l'), q=parse('curb-qty');
+    const cd_m = toMeters[unit('curb-depth-unit')](cd);
+    const gw_m = toMeters[unit('curb-gw-unit')](gw);
+    const ch_m = toMeters[unit('curb-h-unit')](ch);
+    const ft_m = toMeters[unit('curb-flag-unit')](ft);
+    const Lm = toMeters[unit('curb-l-unit')](L);
+    if(Lm<=0){ show('curb-output','<strong class="muted">Enter a positive length.</strong>'); return }
+    // approximate volume: curb block + flag slab
+    const curbVol = cd_m * ch_m * Lm; // simple prism for curb
+    const flagVol = ft_m * gw_m * Lm; // flag slab above gutter
+    const vol = (curbVol + flagVol) * q;
+    show('curb-output', `<strong>${Math.ceil(vol)} m³</strong> (Exact: ${vol.toFixed(3)} m³)`);
+  });
+  document.getElementById('curb-clear').addEventListener('click', ()=>{ ['curb-depth','curb-gw','curb-h','curb-flag','curb-l'].forEach(id=>document.getElementById(id).value=''); document.getElementById('curb-output').textContent='Enter values and click Calculate.' });
+
+  // Stairs (approximation: sum of step prisms)
+  document.getElementById('st-calc').addEventListener('click', ()=>{
+    const run=parse('st-run'), rise=parse('st-rise'), width=parse('st-width'), plat=parse('st-plat'), steps=parse('st-steps');
+    const run_m = toMeters[unit('st-run-unit')](run);
+    const rise_m = toMeters[unit('st-rise-unit')](rise);
+    const width_m = toMeters[unit('st-width-unit')](width);
+    const plat_m = toMeters[unit('st-plat-unit')](plat);
+    if(run_m<=0||rise_m<=0||width_m<=0||steps<=0){ show('st-output','<strong class="muted">Enter positive numbers.</strong>'); return }
+    // approximate stair volume: step prism area = run * rise (per step) * width. Total = steps * run * rise * width + platform depth * width
+    const stepVol = steps * run_m * rise_m * width_m;
+    const platformVol = plat_m * width_m; // assume one platform
+    const vol = (stepVol + platformVol) ;
+    show('st-output', `<strong>${Math.ceil(vol)} m³</strong> (Exact: ${vol.toFixed(3)} m³)`);
+  });
+  document.getElementById('st-clear').addEventListener('click', ()=>{ ['st-run','st-rise','st-width','st-plat','st-steps'].forEach(id=>document.getElementById(id).value=''); document.getElementById('st-output').textContent='Enter values and click Calculate.' });
+
+})();
+</script>
+  <script src="script.js"></script>
+</body>
+</html>

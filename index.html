@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AM CONCRETE — Ready Mix Concrete Bengaluru</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Leaflet CSS (lightweight map) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <!-- JSON-LD structured data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "AM CONCRETE",
+  "image": "./logo.png",
+    "telephone": "+919900018513",
+    "email": "amconcrete999@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Sy no.19/3 & 19/21 Maragondahalli, Kengeri Hobli",
+      "addressLocality": "Bengaluru",
+      "postalCode": "560060",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 12.922915,
+      "longitude": 77.484306
+    },
+    "url": "/projects/rmc/"
+  }
+  </script>
+  <meta name="description" content="RMC Bengaluru - Ready Mix Concrete, Transport & Pumping, Technical Services, Better Practices. Serving major projects across Bengaluru.">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#" aria-label="AM CONCRETE">
+  <img src="logo.png" alt="AM CONCRETE logo" class="logo">
+      </a>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      <nav class="main-nav">
+        <a href="#about"><i class="fa-solid fa-info-circle" aria-hidden="true"></i> About</a>
+        <div class="nav-item nav-dropdown">
+          <a href="#services" class="drop-toggle"><i class="fa-solid fa-compass-drafting icon" aria-hidden="true"></i> Services <i class="fa-solid fa-caret-down" aria-hidden="true"></i></a>
+          <div class="dropdown-menu" aria-label="Services submenu">
+            <a href="#service-ready-mix"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>Ready mix concrete</a>
+            <a href="#service-transport"><i class="fa-solid fa-truck" aria-hidden="true"></i>Transport & pumping</a>
+            <a href="#service-technical"><i class="fa-solid fa-tools" aria-hidden="true"></i>Technical services</a>
+            <a href="measurement.html" target="_blank" rel="noopener"><i class="fa-solid fa-calculator" aria-hidden="true"></i>Measurement</a>
+          </div>
+        </div>
+        <a href="#projects"><i class="fa-solid fa-building" aria-hidden="true"></i> Projects</a>
+        <a href="#locations"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Locations</a>
+        <a href="#careers"><i class="fa-solid fa-user-tie" aria-hidden="true"></i> Careers</a>
+        <a href="#contact"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button id="theme-toggle" class="btn-ghost" aria-label="Toggle theme" aria-pressed="false">
+          <i class="fa-solid fa-sun" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+    <!-- Mobile sliding menu -->
+    <div id="mobile-overlay" class="mobile-overlay" hidden></div>
+    <aside id="mobile-menu" class="mobile-menu" aria-hidden="true">
+      <button id="mobile-close" class="mobile-close" aria-label="Close navigation"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+      <nav class="mobile-nav">
+        <a href="#about"><i class="fa-solid fa-info-circle" aria-hidden="true"></i> About</a>
+        <a href="#services"><i class="fa-solid fa-compass-drafting icon" aria-hidden="true"></i> Services</a>
+        <a href="#projects"><i class="fa-solid fa-building" aria-hidden="true"></i> Projects</a>
+        <a href="#locations"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Locations</a>
+        <a href="#careers"><i class="fa-solid fa-user-tie" aria-hidden="true"></i> Careers</a>
+        <a href="#contact"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Contact</a>
+        <a href="measurement.html" target="_blank" rel="noopener"><i class="fa-solid fa-calculator" aria-hidden="true"></i> Measurement</a>
+      </nav>
+      <div class="mobile-menu-bottom">
+        <!-- Theme toggle shows text and icon (label updates via JS). Placed at bottom as the last option. -->
+        <button id="mobile-theme-toggle" class="btn-ghost" title="Toggle theme"  aria-label="Toggle theme" aria-pressed="false">
+          <i class="fa-solid fa-moon" aria-hidden="true"></i>
+          <span class="theme-label">Dark theme</span>
+        </button>
+      </div>
+    </aside>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>Ready Mix Concrete Solutions for Bengaluru</h1>
+          <p class="lead">High-quality RMC, transport & pumping, technical services and sustainable best practices — engineered for performance and delivered on time.</p>
+          <p class="cta-row">
+            <a class="btn primary" href="https://wa.me/919900018513?text=Hello%20AM%20CONCRETE%2C%20I%20would%20like%20a%20quote%20for%20the%20following%20project%3A%0A%0AProject%20Name%3A%20%5Byour%20project%20name%5D%0ALocation%3A%20%5Bsite%20address%5D%0ARequired%20Concrete%20Grade%3A%20%5BMxx%5D%0AEstimated%20Volume%20(m3)%3A%20%5Bestimated%20volume%5D%0ARequired%20Date%3A%20%5Bdate%5D%0AAdditional%20Notes%3A%20%5Bdetails%5D%0A%0AThanks%2C%0A%5BYour%20Name%5D" target="_blank" rel="noopener">Get a Quote</a>
+            <a class="btn outline" href="#services" style="padding-left: 24px;">Our Services</a>
+          </p>
+        </div>
+        <div class="hero-card">
+          <div class="card-top">
+            <h3>Trusted by builders across the city</h3>
+            <p>Capacity planning, lab-tested mixes & on-site technical support.</p>
+          </div>
+          <ul class="hero-stats">
+            <li><strong>500+</strong><span>Projects</span></li>
+            <li><strong>10k+</strong><span>m3 Delivered</span></li>
+            <li><strong>24/7</strong><span>Support</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Measurement section moved below Technical Services -->
+
+    <section id="about" class="section about">
+  <div class="container about-flex">
+    <div class="about-text">
+      <h2><i class="fa-solid fa-info-circle" aria-hidden="true"></i> About Us</h2>
+      <p>AM CONCRETE is a ready mix concrete supplier and technical partner serving residential, commercial and infrastructure projects across Bengaluru. We combine high-quality materials, on-site testing and experienced technical teams to deliver consistent concrete performance.</p>
+    </div>
+    <div class="about-image">
+      <img src="./img/am_concrete.png" alt="AM CONCRETE Indian Mixer Truck at Bengaluru construction site">
+    </div>
+  </div>
+  <div class="container">
+        <div class="card">
+            <div class="icon-header">
+                <div class="icon-circle"><i class="fa-solid fa-eye" aria-hidden="true"></i></div>
+                <h2>Our Vision</h2>
+            </div>
+            <p>
+                To be a leading force in modern construction by innovating durable, 
+                eco-friendly concrete products that shape resilient communities 
+                and future-ready cities.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon-header">
+                <div class="icon-circle"><i class="fa-solid fa-crosshairs" aria-hidden="true"></i></div>
+                <h2>Our Mission</h2>
+            </div>
+            <p>
+                To deliver high-quality, sustainable concrete solutions that empower 
+                infrastructure and inspire trust. We are committed to transforming 
+                every customer promise into measurable progress—on time, every time.
+            </p>
+        </div>
+    </div>
+</section>
+
+    <section id="services" class="section services">
+      <div class="container">
+        <h2><i class="fa-solid fa-hammer" aria-hidden="true"></i> Services</h2>
+        <div class="services-grid">
+          <article class="service-card">
+            <h3 id="service-ready-mix"><i class="fa-solid fa-compass-drafting icon" aria-hidden="true"></i> Ready Mix Concrete</h3>
+            <p>We supply industry-standard ready-mixed concrete tailored to structural requirements with lab-tested mixes and certified quality control.</p>
+            <h4>Standard Mix Types</h4>
+            <ul>
+              <li>M10, M15, M20, M25 — Common workability mixes</li>
+              <li>M30, M35, M40 — High strength structural mixes</li>
+              <li>Grade-specific designs: Pumpable, Slump-controlled, RCC, Pavement mixes</li>
+              <li>Special mixes: High early strength, Low heat, Lightweight, Self Compacting Concrete (SCC)</li>
+            </ul>
+            <p class="muted">Mix designs follow IS 456 and IS 10262 guidelines and are tailored on request.</p>
+            <h4>Speciality Concrete</h4>
+            <p class="muted">(Technical types and descriptions — images are placeholders from a vendor site; replace with Stockcake images if preferred.)</p>
+            <ul class="special-mixes">
+              <li>
+                <img src="img/high-grade-concrete.jpg" alt="High grade concrete">
+                <div>
+                  <strong>High grade concrete</strong>
+                  <p>High-grade concrete boosts durability, saves space, and cuts emissions, delivering economic benefits for builders.</p>
+                </div>
+              </li>
+              <li>
+                <img src="img/slab-concrete-for-ihb.jpg" alt="Slab concrete">
+                <div>
+                  <strong>Slab ready-mix concrete for IHB</strong>
+                  <p>IHB (Individual House Building) slab concrete excels in strength and versatility and is ideal for slabs, basements, and floors.</p>
+                </div>
+              </li>
+              <li>
+                <img src="img/self-compacting-concrete.jpg" alt="Self compacting concrete">
+                <div>
+                  <strong>Self compacting concrete</strong>
+                  <p>Self compacting concrete ensures a smooth finish for complex structures and Mivan formwork.</p>
+                </div>
+              </li>
+              <li>
+                <img src="img/concrete-green.jpg" alt="Green concrete">
+                <div>
+                  <strong>Green concrete</strong>
+                  <p>Green Concrete boosts durability, impermeability, and eco-friendliness, aligning with sustainability standards.</p>
+                </div>
+              </li>
+              <li>
+                <img src="img/self-compacting-concrete.jpg" alt="Smart dynamic concrete">
+                <div>
+                  <strong>Smart dynamic concrete</strong>
+                  <p>Smart Dynamic Concrete streamlines construction with self-consolidation, rapid curing, and space efficiency.</p>
+                </div>
+              </li>
+              <li>
+                <img src="img/light-weight-concrete.jpg" alt="Lightweight concrete">
+                <div>
+                  <strong>Light weight ready-mix</strong>
+                  <p>Lightweight concrete reduces heat transfer, provides fire protection and useful insulation for roof slabs and panels.</p>
+                </div>
+              </li>
+              <li>
+                <img src="img/pp-fiber-reinforced-concrete-elasticrete.jpg" alt="PP fiber concrete">
+                <div>
+                  <strong>Polypropylene Fiber Concrete</strong>
+                  <p>PP Fiber-reinforced concrete enhances structural toughness and durability against cracking.</p>
+                </div>
+              </li>
+              <li>
+                <img src="img/steel-fiber-reinforced-concrete-ducticrete.jpg" alt="Steel fiber concrete">
+                <div>
+                  <strong>Steel Fiber Reinforced Concrete</strong>
+                  <p>Steel Fiber Reinforced Concrete offers superior strength, impact resistance and durability for industrial use.</p>
+                </div>
+              </li>
+              <li>
+                <img src="img/temperature-control-concrete-tempcrete.jpg" alt="Temperature control concrete">
+                <div>
+                  <strong>Temperature Control Concrete</strong>
+                  <p>Temperature Control Concrete regulates heat during curing and maintains optimal workability for large pours.</p>
+                </div>
+              </li>
+              <li>
+                <img src="img/glass-fiber-reinforced-concrete-gfrc.jpg" alt="Glass fiber concrete">
+                <div>
+                  <strong>Glass Fiber Reinforced Concrete (GFRC)</strong>
+                  <p>GFRC combines high-strength glass fibers with concrete for a lightweight, durable and versatile material.</p>
+                </div>
+              </li>
+              <li>
+                <img src="img/porous-concrete.jpg" alt="Porous concrete">
+                <div>
+                  <strong>Porous / Permeable Concrete</strong>
+                  <p>Porous concrete (sustainable pavement) helps manage stormwater runoff and supports sustainable site drainage.</p>
+                </div>
+              </li>
+              <li>
+                <img src="img/coloured_concrete.jpeg" alt="Colored concrete">
+                <div>
+                  <strong>Colored Concrete</strong>
+                  <p>Colored concrete adds aesthetic appeal to architectural and landscape projects, offering a wide range of color options.</p>
+                </div>
+              </li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <h3 id="service-transport"><i class="fa-solid fa-truck-fast icon" aria-hidden="true"></i> Transport & Pumping</h3>
+            <p>We provide complete transport and concrete placement services tailored for busy construction sites. Key offerings include:</p>
+            <div class="image-row-container">
+        
+            <div class="image-item">
+                <img src="./img/boom.jpeg"
+                    alt="AM CONCRETE Mixer Boom">
+            </div>
+            <div class="image-item">
+                <img src="./img/mixer.png"
+                    alt="AM CONCRETE used for construction of a building">
+            </div>
+            
+            </div>
+            <ul class="service-list">
+              <li><strong>Fleet of transit mixers</strong> — modern, regularly maintained mixers of varying capacities to match project volumes and ensure consistent mix delivery.</li>
+              <li><strong>Line pumps and boom pumps (boom services)</strong> — flexible line pumps for short reaches and high-capacity boom pumps for tall or long-reach pours, reducing manual handling and speeding placement.</li>
+              <li><strong>Mobile pump fleet & qualified operators</strong> — certified pump operators and crew trained in safe, efficient placement techniques to maintain concrete quality on site.</li>
+              <li><strong>On-site batching coordination</strong> — close coordination with batching plants to deliver the exact mix designs, slump control and temperature-management for hot-weather placements.</li>
+              <li><strong>Transport scheduling & logistics</strong> — route planning, GPS tracking, and just-in-time dispatch to minimize waiting times and ensure timely arrival for continuous pours.</li>
+              <li><strong>Placement support for complex pours</strong> — pour sequencing, pump siting, and placement supervision for high-volume, rapid-curing or specialized concreting works.</li>
+              <li><strong>Preventive maintenance & uptime guarantees</strong> — scheduled servicing and spare-equipment readiness to reduce downtime during critical pours.</li>
+              <li><strong>Safety & quality checks</strong> — on‑site slump testing, cylinder sampling and adherence to safety procedures and traffic/permit requirements for urban sites.</li>
+              <li><strong>24/7 emergency & high-volume support</strong> — extended-hour operations and surge capacity for tight timelines or urgent project needs.</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <h3 id="service-technical"><i class="fa-solid fa-wrench" aria-hidden="true"></i> Technical Services</h3>
+            <p>Our technical services support designers and site teams through the full concrete lifecycle. Key services include:</p>
+            <ul class="service-list">
+              <li><strong>Mix design & trial mixes</strong> — laboratory-backed designs tailored for strength, workability and durability requirements.</li>
+              <li><strong>On-site testing</strong> — slump tests, temperature monitoring and cylinder sampling with rapid reporting.</li>
+              <li><strong>Strength monitoring & lab testing</strong> — compressive strength, permeability and chloride diffusion testing through accredited labs.</li>
+              <li><strong>Admixture & materials consultancy</strong> — recommendations for superplasticizers, retarders, accelerators and SCMs to meet project objectives.</li>
+              <li><strong>Durability & specification review</strong> — service-life assessments, cover recommendations and exposure-class guidance.</li>
+              <li><strong>Troubleshooting & corrective actions</strong> — site diagnostics for segregation, bleeding, early-age cracking and remedial approaches.</li>
+              <li><strong>Instrumentation & digital reporting</strong> — sensor-based temperature/curing logs and digital delivery of test certificates and QA records.</li>
+              <li><strong>Training & site support</strong> — on-site training for pump operators, supervisors and QC technicians to maintain placement quality.</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <h3><i class="fa-solid fa-seedling" aria-hidden="true"></i> Better Practices</h3>
+            <p>We help projects adopt best practices that improve performance, reduce lifecycle costs and lower environmental impact:</p>
+            <ul class="service-list">
+              <li><strong>Thermal control & curing</strong> — temperature management, insulated formwork and recommended curing regimes for optimal strength gain.</li>
+              <li><strong>Water-cement ratio management</strong> — controls and testing to ensure designed strength and durability are achieved on-site.</li>
+              <li><strong>Placement sequencing & consolidation</strong> — guidance on pour sequencing, compaction and vibration to avoid defects.</li>
+              <li><strong>Sustainable material sourcing</strong> — use of SCMs, recycled aggregates and low-carbon options where appropriate.</li>
+              <li><strong>Formwork & finishing guidance</strong> — recommendations for surface finish, shutter release and protection during early ages.</li>
+              <li><strong>Waste reduction & resource planning</strong> — batch sizing and logistics to minimise returns and material waste.</li>
+              <li><strong>QA/QC workflows</strong> — standardized checklists, acceptance criteria and documentation practices to streamline inspections.</li>
+              <li><strong>Environmental & safety controls</strong> — dust, runoff and traffic management plans for urban placements.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section projects">
+      <div class="container">
+        <h2><i class="fa-solid fa-building" aria-hidden="true"></i> Major Projects</h2>
+        <p class="muted">Selected projects across residential, commercial and infrastructure categories.</p>
+        <div class="projects-grid">
+          <div class="proj">Metro Station — Concrete for platform slabs</div>
+          <div class="proj">Residential Towers — High-rise structural pours</div>
+          <div class="proj">Industrial Park — Heavy-duty pavements</div>
+          <div class="proj">Bridge Works — Precast & cast-in-place components</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="locations" class="section locations">
+      <div class="container">
+        <h2><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Locations</h2>
+        <p>We operate across greater Bengaluru with strategically located batching plants and a responsive transport network.</p>
+        <ul class="locations-list">
+          <li>Head Office — Sy no.19/3 &amp; 19/21 Maragondahalli, Kengeri Hobli, Bengaluru — 560060 — <a href="https://www.google.com/maps?q=12.922915,77.484306" target="_blank" rel="noopener">View on Google Maps</a></li>
+        </ul>
+        <div class="map-wrap">
+          <h3>Our Location</h3>
+          <p><a href="https://www.google.com/maps?q=12.922915,77.484306" target="_blank" rel="noopener">Open AM CONCRETE in Google Maps</a></p>
+          <div id="leaflet-map" aria-label="AM CONCRETE interactive map"></div>
+          <p class="muted">If the interactive map doesn't load, <a href="https://www.google.com/maps?q=12.922915,77.484306" target="_blank" rel="noopener">open the location in Google Maps</a>.</p>
+          <iframe
+            src="https://www.google.com/maps?q=12.922915,77.484306&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            aria-label="AM CONCRETE location map"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="careers" class="section careers">
+        <div class="container">
+            <h2><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Careers</h2>
+            <p>We're hiring site supervisors, drivers, lab technicians and sales staff. Send your CV to <a
+                    href="mailto:amconcrete999@gmail.com?subject=Application%20-%20%5BPosition%5D&body=Hello%20AM%20CONCRETE%2C%0A%0AI%20am%20applying%20for%20the%20position%20of%20%5BPosition%5D.%20Please%20find%20my%20CV%20attached.%0A%0AName%3A%20%5BYour%20Name%5D%0APhone%3A%20%5BPhone%5D%0AEmail%3A%20%5BEmail%5D%0ALocation%3A%20%5BCity%5D%0A%0AThanks%2C%0A%5BYour%20Name%5D">amconcrete999@gmail.com</a>
+            </p>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container contact-grid">
+        <div>
+          <h2><i class="fa-solid fa-envelope" aria-hidden="true"></i> Contact Us</h2>
+          <p>For enquiries, technical support or quotations reach out via phone, WhatsApp or the form.</p>
+          <ul class="contact-list">
+            <li><i class="fa-solid fa-phone" aria-hidden="true"></i><strong>Phone:</strong> 
+                <a href="tel:+919663911233">+91 9663911233</a> /
+                <a href="tel:+919900018513">+91 9900018513</a>
+            </li>
+            <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i><strong>Address:</strong> Sy no.19/3 &amp; 19/21 Maragondahalli, Kengeri Hobli, Bengaluru, 560060</li>
+            <li><i class="fa-solid fa-envelope" aria-hidden="true"></i><strong>Email:</strong> <a href="mailto:amconcrete999@gmail.com">amconcrete999@gmail.com</a></li>
+            <li><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><strong>WhatsApp:</strong> <a href="https://wa.me/919900018513" target="_blank" rel="noopener">Chat on WhatsApp</a></li>
+          </ul>
+        </div>
+
+        <!-- <form class="contact-form" action="#" onsubmit="event.preventDefault(); alert('Form submitted — placeholder');">
+          <label>Full name<input type="text" name="name" required></label>
+          <label>Email<input type="email" name="email" required></label>
+          <label>Phone<input type="tel" name="phone"></label>
+          <label>Message<textarea name="message" rows="4"></textarea></label>
+          <div class="form-actions">
+            <a class="contact-email" href="mailto:amconcrete999@gmail.com">Email Us</a>
+          </div>
+        </form> -->
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>© <span id="year"></span> AM CONCRETE</div>
+        <div class="footer-links">
+        <a href="https://sunilbn.com" target="_blank" rel="noopener" style="font-size:8px;">built by sunilbn.com</a>
+        </div>
+      </div>
+    </footer>
+
+  <a id="whatsapp-float" class="whatsapp-float" href="https://wa.me/919900018513?text=Hello%20AM%20CONCRETE%2C%20I%20would%20like%20a%20quote%20for%20the%20following%20project%3A%0A%0AProject%20Name%3A%20%5Byour%20project%20name%5D%0ALocation%3A%20%5Bsite%20address%5D%0ARequired%20Concrete%20Grade%3A%20%5BMxx%5D%0AEstimated%20Volume%20(m3)%3A%20%5Bestimated%20volume%5D%0ARequired%20Date%3A%20%5Bdate%5D%0AAdditional%20Notes%3A%20%5Bdetails%5D%0A%0AThanks%2C%0A%5BYour%20Name%5D" target="_blank" aria-label="WhatsApp">
+      <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+      <span class="visually-hidden">WhatsApp</span>
+    </a>
+
+  </main>
+
+  <script src="script.js"></script>
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</body>
+</html>
